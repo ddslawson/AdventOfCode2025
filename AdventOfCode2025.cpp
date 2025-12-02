@@ -4,10 +4,10 @@
 #include <iostream>
 #include <chrono>
 #include "Q1_SafeCode.h"
+#include "Q2_ProductIDCheck.h"
 
-int main()
+void Question1()
 {
-    std::cout << "ADVENT OF CODE 2025\n";
     std::cout << "QUESTION 1\n";
 
     Q1_SafeCode q1 = Q1_SafeCode();
@@ -25,7 +25,39 @@ int main()
     auto q1End = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double, std::milli> q1_Duration = q1End - q1Start;
-    std::cout << "Q1 ANSWER 1: " << q1_A1 << " Q1 ANSWER 2: " << q1_A2 << " Time: " << q1_Duration.count()/avgCount << "\n";
+    std::cout << "Q1 ANSWER 1: " << q1_A1 << " Q1 ANSWER 2: " << q1_A2 << " Time: " << q1_Duration.count() / avgCount << "ms\n";
+}
+
+void Question2()
+{
+    std::cout << "QUESTION 2\n";
+
+    Q2_ProductIDCheck q2 = Q2_ProductIDCheck();
+
+    int avgCount = 1;
+
+    long long invalidIDSum = 0;
+    long long invalidIDSum2 = 0;
+
+    auto q2Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        //q2.Solve(invalidIDSum);
+        q2.Solve2(invalidIDSum, invalidIDSum2);
+    }
+    auto q2End = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> q2_Duration = q2End - q2Start;
+    std::cout << "Q2 ANSWER 1: " << invalidIDSum << " ANSWER 2: " << invalidIDSum2 << " Time: " << q2_Duration.count() / avgCount << "ms\n";
+}
+
+int main()
+{
+    std::cout << "ADVENT OF CODE 2025\n";
+
+    Question1();
+
+    Question2();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

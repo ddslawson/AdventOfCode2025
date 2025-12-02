@@ -1,12 +1,11 @@
 #include "Q1_SafeCode.h"
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <string>
 
 void Q1_SafeCode::Solve(int& zeroCount, int& zeroClickCount)
 {
-    std::ifstream infile("SafeCode.txt");
+    std::ifstream infile("Q1_SafeCode.txt");
 
     std::string line = "";
     int currentNumber = 50;
@@ -53,7 +52,7 @@ void Q1_SafeCode::Solve(int& zeroCount, int& zeroClickCount)
             ++zeroCount;
         }
 
-        // Wrap negative bumbers to 0-99
+        // Wrap negative numbers to 0-99
         if (currentNumber < 0)
         {
             currentNumber += 100;
