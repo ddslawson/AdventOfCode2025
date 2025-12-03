@@ -24,12 +24,18 @@
     <ClCompile Include="Q2_ProductIDCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Q3_BatteryJoltage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Q2_ProductIDCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Q3_BatteryJoltage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

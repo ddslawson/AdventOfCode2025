@@ -5,6 +5,7 @@
 #include <chrono>
 #include "Q1_SafeCode.h"
 #include "Q2_ProductIDCheck.h"
+#include "Q3_BatteryJoltage.h"
 
 void Question1()
 {
@@ -51,6 +52,44 @@ void Question2()
     std::cout << "Q2 ANSWER 1: " << invalidIDSum << " ANSWER 2: " << invalidIDSum2 << " Time: " << q2_Duration.count() / avgCount << "ms\n";
 }
 
+void Question3()
+{
+    std::cout << "QUESTION 3\n";
+
+    Q3_BatteryJoltage q3 = Q3_BatteryJoltage();
+
+    int avgCount = 10;
+
+    int numLength = 2;
+    unsigned long long joltageSum = 0;
+
+    auto q3Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        numLength = 2;
+        joltageSum = 0;
+        q3.Solve(joltageSum, numLength);
+    }
+    auto q3End = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> q3_Duration = q3End - q3Start;
+    std::cout << "Q3 ANSWER 1: " << joltageSum << " Time: " << q3_Duration.count() / avgCount << "ms\n";
+
+    numLength = 12;
+    joltageSum = 0;
+    q3Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        numLength = 12;
+        joltageSum = 0;
+        q3.Solve(joltageSum, numLength);
+    }
+    q3End = std::chrono::high_resolution_clock::now();
+
+    q3_Duration = q3End - q3Start;
+    std::cout << "Q3 ANSWER 2: " << joltageSum << " Time: " << q3_Duration.count() / avgCount << "ms\n";
+}
+
 int main()
 {
     std::cout << "ADVENT OF CODE 2025\n";
@@ -58,6 +97,8 @@ int main()
     Question1();
 
     Question2();
+
+    Question3();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
