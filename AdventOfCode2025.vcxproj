@@ -131,11 +131,13 @@
     <ClCompile Include="Q1_SafeCode.cpp" />
     <ClCompile Include="Q3_BatteryJoltage.cpp" />
     <ClCompile Include="Q2_ProductIDCheck.cpp" />
+    <ClCompile Include="Q4_PaperRolls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h" />
     <ClInclude Include="Q3_BatteryJoltage.h" />
     <ClInclude Include="Q2_ProductIDCheck.h" />
+    <ClInclude Include="Q4_PaperRolls.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

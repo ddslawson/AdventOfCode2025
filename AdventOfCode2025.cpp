@@ -6,6 +6,7 @@
 #include "Q1_SafeCode.h"
 #include "Q2_ProductIDCheck.h"
 #include "Q3_BatteryJoltage.h"
+#include "Q4_PaperRolls.h"
 
 void Question1()
 {
@@ -90,6 +91,39 @@ void Question3()
     std::cout << "Q3 ANSWER 2: " << joltageSum << " Time: " << q3_Duration.count() / avgCount << "ms\n";
 }
 
+void Question4()
+{
+    std::cout << "QUESTION 4\n";
+
+    Q4_PaperRolls q4 = Q4_PaperRolls();
+
+    int avgCount = 10;
+
+    int paperCount = 0;
+
+    auto q4Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        paperCount = 0;
+        q4.Solve(paperCount, false);
+    }
+    auto q4End = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> q4_Duration = q4End - q4Start;
+    std::cout << "Q4 ANSWER 1: " << paperCount << " Time: " << q4_Duration.count() / avgCount << "ms\n";
+
+    q4Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        paperCount = 0;
+        q4.Solve(paperCount, true);
+    }
+    q4End = std::chrono::high_resolution_clock::now();
+
+    q4_Duration = q4End - q4Start;
+    std::cout << "Q4 ANSWER 2: " << paperCount << " Time: " << q4_Duration.count() / avgCount << "ms\n";
+}
+
 int main()
 {
     std::cout << "ADVENT OF CODE 2025\n";
@@ -99,6 +133,8 @@ int main()
     Question2();
 
     Question3();
+
+    Question4();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
