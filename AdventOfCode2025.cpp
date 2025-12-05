@@ -7,6 +7,7 @@
 #include "Q2_ProductIDCheck.h"
 #include "Q3_BatteryJoltage.h"
 #include "Q4_PaperRolls.h"
+#include "Q5_IngredientExpiryCheck.h"
 
 void Question1()
 {
@@ -124,17 +125,42 @@ void Question4()
     std::cout << "Q4 ANSWER 2: " << paperCount << " Time: " << q4_Duration.count() / avgCount << "ms\n";
 }
 
+void Question5()
+{
+    std::cout << "QUESTION 5\n";
+
+    Q5_IngredientExpiryCheck q5 = Q5_IngredientExpiryCheck();
+
+    int avgCount = 20;
+    int expiredIngredientCount = 0;
+    long long freshIDCount = 0;
+
+    auto q5Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        expiredIngredientCount = 0;
+        freshIDCount = 0;
+        q5.Solve(expiredIngredientCount, freshIDCount);
+    }
+    auto q5End = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> q5_Duration = q5End - q5Start;
+    std::cout << "Q5 ANSWER 1: " << expiredIngredientCount << " ANSWER 2: " << freshIDCount << " Time: " << q5_Duration.count() / avgCount << "ms\n";
+}
+
 int main()
 {
     std::cout << "ADVENT OF CODE 2025\n";
 
-    Question1();
+    //Question1();
 
-    Question2();
+    //Question2();
 
-    Question3();
+    //Question3();
 
-    Question4();
+    //Question4();
+
+    Question5();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

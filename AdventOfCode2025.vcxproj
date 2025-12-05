@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,12 +133,14 @@
     <ClCompile Include="Q3_BatteryJoltage.cpp" />
     <ClCompile Include="Q2_ProductIDCheck.cpp" />
     <ClCompile Include="Q4_PaperRolls.cpp" />
+    <ClCompile Include="Q5_IngredientExpiryCheck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h" />
     <ClInclude Include="Q3_BatteryJoltage.h" />
     <ClInclude Include="Q2_ProductIDCheck.h" />
     <ClInclude Include="Q4_PaperRolls.h" />
+    <ClInclude Include="Q5_IngredientExpiryCheck.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
