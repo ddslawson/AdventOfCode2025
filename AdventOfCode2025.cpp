@@ -9,6 +9,7 @@
 #include "Q4_PaperRolls.h"
 #include "Q5_IngredientExpiryCheck.h"
 #include "Q6_MathsHomework.h"
+#include "Q7_TachyonSplitter.h"
 
 void Question1()
 {
@@ -182,6 +183,40 @@ void Question6()
     std::cout << "Q6 ANSWER 2: " << answerSum2 << " Time: " << q6_Duration.count() / avgCount << "ms\n";
 }
 
+void Question7()
+{
+    std::cout << "QUESTION 7\n";
+
+    Q7_TachyonSplitter q7 = Q7_TachyonSplitter();
+
+    int avgCount = 10;
+    int splitCount = 0;
+    long long pathCount = 0;
+
+    auto timeStart = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        splitCount = 0;
+        pathCount = 0;
+        q7.Solve(splitCount, pathCount);
+    }
+    auto timeEnd = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> duration = timeEnd - timeStart;
+    std::cout << "Q7 ANSWER 1: " << splitCount << " ANSWER 2: " << pathCount << " Time: " << duration.count() / avgCount << "ms\n";
+
+    /*q6Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        answerSum2 = 0;
+        q6.Solve2(answerSum2);
+    }
+    q6End = std::chrono::high_resolution_clock::now();
+
+    q6_Duration = q6End - q6Start;
+    std::cout << "Q6 ANSWER 2: " << answerSum2 << " Time: " << q6_Duration.count() / avgCount << "ms\n";*/
+}
+
 
 int main()
 {
@@ -197,7 +232,9 @@ int main()
 
     //Question5();
 
-    Question6();
+    //Question6();
+
+    Question7();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

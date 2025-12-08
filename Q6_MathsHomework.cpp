@@ -4,24 +4,12 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <deque>
 
 void Q6_MathsHomework::Solve(long long& answerSum)
 {
     std::ifstream infile("Q6_MathsHW.txt");
     std::string line = "";
     std::string segment = "";
-
-    auto findChar = [this](std::string& input, char& c) {
-        for (int i = 0; i < input.length(); ++i)
-        {
-            if (input[i] == c)
-            {
-                return i;
-            }
-        }
-        return (int)input.length();
-        };
 
     std::vector<std::vector<int>> sums;
     std::vector<std::string> operations;
@@ -96,17 +84,6 @@ void Q6_MathsHomework::Solve2(long long& answer2Sum)
 {
     std::ifstream infile("Q6_MathsHW.txt");
     std::string line = "";
-
-    auto findChar = [this](std::string& input, char& c) {
-        for (int i = 0; i < input.length(); ++i)
-        {
-            if (input[i] == c)
-            {
-                return i;
-            }
-        }
-        return (int)input.length();
-        };
 
     std::vector<std::vector<int>> sums;
     std::vector<std::string> operations;

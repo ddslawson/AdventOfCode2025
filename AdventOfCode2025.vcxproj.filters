@@ -36,6 +36,9 @@
     <ClCompile Include="Q6_MathsHomework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Q7_TachyonSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Q6_MathsHomework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Q7_TachyonSplitter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
