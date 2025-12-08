@@ -33,6 +33,9 @@
     <ClCompile Include="Q5_IngredientExpiryCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Q6_MathsHomework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Q5_IngredientExpiryCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Q6_MathsHomework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

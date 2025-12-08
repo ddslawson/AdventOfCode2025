@@ -134,6 +134,7 @@
     <ClCompile Include="Q2_ProductIDCheck.cpp" />
     <ClCompile Include="Q4_PaperRolls.cpp" />
     <ClCompile Include="Q5_IngredientExpiryCheck.cpp" />
+    <ClCompile Include="Q6_MathsHomework.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h" />
@@ -141,6 +142,7 @@
     <ClInclude Include="Q2_ProductIDCheck.h" />
     <ClInclude Include="Q4_PaperRolls.h" />
     <ClInclude Include="Q5_IngredientExpiryCheck.h" />
+    <ClInclude Include="Q6_MathsHomework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,6 +8,7 @@
 #include "Q3_BatteryJoltage.h"
 #include "Q4_PaperRolls.h"
 #include "Q5_IngredientExpiryCheck.h"
+#include "Q6_MathsHomework.h"
 
 void Question1()
 {
@@ -148,6 +149,40 @@ void Question5()
     std::cout << "Q5 ANSWER 1: " << expiredIngredientCount << " ANSWER 2: " << freshIDCount << " Time: " << q5_Duration.count() / avgCount << "ms\n";
 }
 
+void Question6()
+{
+    std::cout << "QUESTION 6\n";
+
+    Q6_MathsHomework q6 = Q6_MathsHomework();
+
+    int avgCount = 10;
+    long long answerSum = 0;
+    long long answerSum2 = 0;
+
+    auto q6Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        answerSum = 0;
+        q6.Solve(answerSum);
+    }
+    auto q6End = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> q6_Duration = q6End - q6Start;
+    std::cout << "Q6 ANSWER 1: " << answerSum << " Time: " << q6_Duration.count() / avgCount << "ms\n";
+
+    q6Start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        answerSum2 = 0;
+        q6.Solve2(answerSum2);
+    }
+    q6End = std::chrono::high_resolution_clock::now();
+
+    q6_Duration = q6End - q6Start;
+    std::cout << "Q6 ANSWER 2: " << answerSum2 << " Time: " << q6_Duration.count() / avgCount << "ms\n";
+}
+
+
 int main()
 {
     std::cout << "ADVENT OF CODE 2025\n";
@@ -160,7 +195,9 @@ int main()
 
     //Question4();
 
-    Question5();
+    //Question5();
+
+    Question6();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
