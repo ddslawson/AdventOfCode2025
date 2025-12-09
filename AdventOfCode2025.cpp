@@ -10,6 +10,7 @@
 #include "Q5_IngredientExpiryCheck.h"
 #include "Q6_MathsHomework.h"
 #include "Q7_TachyonSplitter.h"
+#include "Q8_JunctionBoxes.h"
 
 void Question1()
 {
@@ -204,17 +205,42 @@ void Question7()
 
     std::chrono::duration<double, std::milli> duration = timeEnd - timeStart;
     std::cout << "Q7 ANSWER 1: " << splitCount << " ANSWER 2: " << pathCount << " Time: " << duration.count() / avgCount << "ms\n";
+}
 
-    /*q6Start = std::chrono::high_resolution_clock::now();
+void Question8()
+{
+    std::cout << "QUESTION 8\n";
+
+    Q8_JunctionBoxes q8 = Q8_JunctionBoxes();
+
+    int avgCount = 1;
+    long long circuitProduct = 0;
+    long long fullCircuitProduct = 0;
+    int maxConnections = 1000;
+
+    auto timeStart = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < avgCount; ++i)
     {
-        answerSum2 = 0;
-        q6.Solve2(answerSum2);
+        circuitProduct = 0;
+        fullCircuitProduct = 0;
+        q8.Solve(circuitProduct, fullCircuitProduct, maxConnections);
     }
-    q6End = std::chrono::high_resolution_clock::now();
+    auto timeEnd = std::chrono::high_resolution_clock::now();
 
-    q6_Duration = q6End - q6Start;
-    std::cout << "Q6 ANSWER 2: " << answerSum2 << " Time: " << q6_Duration.count() / avgCount << "ms\n";*/
+    std::chrono::duration<double, std::milli> duration = timeEnd - timeStart;
+    std::cout << "Q8 ANSWER 1: " << circuitProduct << " Time: " << duration.count() / avgCount << "ms\n";
+
+    timeStart = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        circuitProduct = 0;
+        fullCircuitProduct = 0;
+        q8.Solve(circuitProduct, fullCircuitProduct);
+    }
+    timeEnd = std::chrono::high_resolution_clock::now();
+
+    duration = timeEnd - timeStart;
+    std::cout << "Q8 ANSWER 2: " << fullCircuitProduct << " Time: " << duration.count() / avgCount << "ms\n";
 }
 
 
@@ -234,7 +260,9 @@ int main()
 
     //Question6();
 
-    Question7();
+    //Question7();
+
+    Question8();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
