@@ -137,6 +137,7 @@
     <ClCompile Include="Q6_MathsHomework.cpp" />
     <ClCompile Include="Q7_TachyonSplitter.cpp" />
     <ClCompile Include="Q8_JunctionBoxes.cpp" />
+    <ClCompile Include="Q9_RedCarpet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Q6_MathsHomework.h" />
     <ClInclude Include="Q7_TachyonSplitter.h" />
     <ClInclude Include="Q8_JunctionBoxes.h" />
+    <ClInclude Include="Q9_RedCarpet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

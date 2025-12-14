@@ -11,6 +11,7 @@
 #include "Q6_MathsHomework.h"
 #include "Q7_TachyonSplitter.h"
 #include "Q8_JunctionBoxes.h"
+#include "Q9_RedCarpet.h"
 
 void Question1()
 {
@@ -243,6 +244,38 @@ void Question8()
     std::cout << "Q8 ANSWER 2: " << fullCircuitProduct << " Time: " << duration.count() / avgCount << "ms\n";
 }
 
+void Question9()
+{
+    std::cout << "QUESTION 9\n";
+
+    Q9_RedCarpet q9 = Q9_RedCarpet();
+
+    int avgCount = 1;
+    long long maxCarpetArea = 0;
+
+    auto timeStart = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        maxCarpetArea = 0;
+        q9.Solve(maxCarpetArea);
+    }
+    auto timeEnd = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> duration = timeEnd - timeStart;
+    std::cout << "Q9 ANSWER 1: " << maxCarpetArea << " Time: " << duration.count() / avgCount << "ms\n";
+
+    timeStart = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        maxCarpetArea = 0;
+        q9.Solve2(maxCarpetArea);
+    }
+    timeEnd = std::chrono::high_resolution_clock::now();
+
+    duration = timeEnd - timeStart;
+    std::cout << "Q8 ANSWER 2: " << maxCarpetArea << " Time: " << duration.count() / avgCount << "ms\n";
+}
+
 
 int main()
 {
@@ -262,7 +295,9 @@ int main()
 
     //Question7();
 
-    Question8();
+    //Question8();
+
+    Question9();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

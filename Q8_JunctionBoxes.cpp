@@ -5,7 +5,6 @@
 #include <vector>
 #include <map>
 #include <set>
-#include <list>
 
 void Q8_JunctionBoxes::Solve(long long& circuitProduct, long long& fullCircuitProduct, int maxConnections)
 {
@@ -43,7 +42,7 @@ void Q8_JunctionBoxes::Solve(long long& circuitProduct, long long& fullCircuitPr
         {
             Vec3 prevPoint = vectors[i];
 
-            double distance = DistanceBetween2Vectors(vec, prevPoint);
+            double distance = DistanceBetween2VectorsSquared(vec, prevPoint);
 
             distanceToPointIndex.insert({ distance, {vIndex, i} });
         }
@@ -179,7 +178,8 @@ void Q8_JunctionBoxes::Solve(long long& circuitProduct, long long& fullCircuitPr
     std::cout << circuitLengths[0] << "*" << circuitLengths[1] << "*" << circuitLengths[1] << "=" << circuitProduct << "\n";
 }
 
-double Q8_JunctionBoxes::DistanceBetween2Vectors(Vec3& v1, Vec3& v2)
+double Q8_JunctionBoxes::DistanceBetween2VectorsSquared(Vec3& v1, Vec3& v2)
 {
-    return sqrt(pow((v2.x - v1.x), 2) + pow((v2.y - v1.y), 2) + pow((v2.z - v1.z), 2));
+    // Skip sqrt to save time
+    return (pow((v2.x - v1.x), 2) + pow((v2.y - v1.y), 2) + pow((v2.z - v1.z), 2));
 }

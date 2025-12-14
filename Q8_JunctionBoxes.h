@@ -30,5 +30,5 @@ class Q8_JunctionBoxes
 public:
 	void Solve(long long& circuitProduct, long long& fullCircuitProduct, int maxConnections = 0);
 private:
-    double DistanceBetween2Vectors(Vec3& v1, Vec3& v2);
+    double DistanceBetween2VectorsSquared(Vec3& v1, Vec3& v2);
 };

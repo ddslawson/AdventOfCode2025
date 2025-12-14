@@ -42,6 +42,9 @@
     <ClCompile Include="Q8_JunctionBoxes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Q9_RedCarpet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Q1_SafeCode.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Q8_JunctionBoxes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Q9_RedCarpet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
