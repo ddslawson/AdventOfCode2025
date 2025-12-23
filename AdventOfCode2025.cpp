@@ -12,6 +12,7 @@
 #include "Q7_TachyonSplitter.h"
 #include "Q8_JunctionBoxes.h"
 #include "Q9_RedCarpet.h"
+#include "Q10_ButtonsAndLights.h"
 
 void Question1()
 {
@@ -276,6 +277,29 @@ void Question9()
     std::cout << "Q8 ANSWER 2: " << maxCarpetArea << " Time: " << duration.count() / avgCount << "ms\n";
 }
 
+void Question10()
+{
+    std::cout << "QUESTION 10\n";
+
+    Q10_ButtonsAndLights q10 = Q10_ButtonsAndLights();
+
+    int avgCount = 1;
+    long long numPresses = 0;
+    long long numPresses2 = 0;
+
+    auto timeStart = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < avgCount; ++i)
+    {
+        numPresses = 0;
+        q10.Solve(numPresses);
+        q10.Solve2(numPresses2);
+    }
+    auto timeEnd = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> duration = timeEnd - timeStart;
+    std::cout << "Q10 ANSWER 1: " << numPresses << " ANSWER 2: " << numPresses2 << " Time: " << duration.count() / avgCount << "ms\n";
+}
+
 
 int main()
 {
@@ -297,7 +321,9 @@ int main()
 
     //Question8();
 
-    Question9();
+    //Question9();
+
+    Question10();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2025.cpp" />
+    <ClCompile Include="Q10_ButtonsAndLights.cpp" />
     <ClCompile Include="Q1_SafeCode.cpp" />
     <ClCompile Include="Q3_BatteryJoltage.cpp" />
     <ClCompile Include="Q2_ProductIDCheck.cpp" />
@@ -140,6 +141,7 @@
     <ClCompile Include="Q9_RedCarpet.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Q10_ButtonsAndLights.h" />
     <ClInclude Include="Q1_SafeCode.h" />
     <ClInclude Include="Q3_BatteryJoltage.h" />
     <ClInclude Include="Q2_ProductIDCheck.h" />
